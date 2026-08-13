@@ -1,0 +1,110 @@
+body{
+    text-align: center;
+    background-color: black;
+}
+
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.luckiest-guy-small {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.title{
+    font-size: 3em;
+    color: aquamarine;
+}
+.subtitle{
+    font-size: 2em;
+    color: bisque;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: rgb(253, 240, 221);
+        height: 100vh;
+
+}
+
+.color-form{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    gap: 1px;
+    width: 90%;
+
+
+}
+
+#colorInput{
+    margin-top: 30px;
+    width: 10%;
+    height: 50px;
+}
+#colorMode{
+    margin-top: 30px;
+    width: 57%;
+    height: 50px;
+
+}
+#generateButton{
+    margin-top: 30px;
+    background-color: rgb(255, 188, 133);
+    padding: 1em auto;
+    width: 27%;
+    height: 3em;
+    border-radius: 5px;
+    border: solid 0.5px black;
+}
+
+#generateButton:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+
+.color-scheme{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.color {
+    margin-top: 20px;
+    width: 20%;
+    height: 80vh;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spins{
+    display: flex;
+    justify-content: space-between;
+}
+.element {
+  background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  animation: .2s linear turn infinite;
+}
+.element:hover {
+    animation: 3s linear turn infinite;
+}
+
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  } 100% {
+    transform: rotate(360deg);
+  }
+}
