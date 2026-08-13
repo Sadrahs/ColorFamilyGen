@@ -19,7 +19,9 @@
 
         <div class="container">
             <form class="color-form">
-                <input type="color" id="colorInput" placeholder="Enter a color hex code (e.g., #ff0000)">
+                <label for="colorInput" class="visually-hidden">Base color</label>
+                <input type="color" id="colorInput" value="#ff0000">
+                <label for="colorMode" class="visually-hidden">Color scheme mode</label>
                 <select id="colorMode" class="luckiest-guy-small">
                     <option value="monochrome">Monochrome</option>
                     <option value="analogic">Analogic</option>

@@ -1,0 +1,10 @@
+{
+  "name": "colorfamilygen",
+  "version": "1.0.0",
+  "description": "Generate color schemes from a base color using TheColorAPI",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "license": "MIT"
+}
