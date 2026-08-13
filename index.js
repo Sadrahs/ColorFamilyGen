@@ -1,9 +1,4 @@
-
-
-
-
 const generateColor = document.getElementById("generateButton");
-
 const colorScheme = document.getElementById("colorScheme");
 
 generateColor.addEventListener("click", (e) => {
@@ -39,17 +34,21 @@ generateColor.addEventListener("click", (e) => {
         })
 })
 
-
 function schemeBuilder(hex){
-
-    colorScheme.innerHTML += `<div class="color" style="background-color: ${hex};">${hex}</div>`;
-
-
-
-
+    const swatch = document.createElement("div");
+    swatch.className = "color";
+    swatch.style.backgroundColor = hex;
+    swatch.innerHTML = `
+        <span class="hex-label">${hex}</span>
+        <span class="copied-label">Copied!</span>
+    `;
+    swatch.addEventListener("click", () => copyHex(swatch, hex));
+    colorScheme.appendChild(swatch);
 }
 
-
-
-
-        
+function copyHex(swatch, hex){
+    navigator.clipboard.writeText(hex).then(() => {
+        swatch.classList.add("copied");
+        setTimeout(() => swatch.classList.remove("copied"), 1000);
+    });
+}

@@ -1,43 +1,56 @@
-<html>
+<html lang="en">
     <head>
-        <title>ColorFanilyGenerator</title>
+        <title>Color Family Generator</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Pick a base color and instantly generate a matching color scheme — monochrome, analogic, complement, triad, or quad.">
+
+        <meta property="og:title" content="Color Family Generator">
+        <meta property="og:description" content="Pick a base color and instantly generate a matching color scheme.">
+        <meta property="og:type" content="website">
+
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%236c5ce7'/%3E%3Ccircle cx='35' cy='35' r='14' fill='%23ff6b6b'/%3E%3Ccircle cx='65' cy='35' r='14' fill='%23ffd93d'/%3E%3Ccircle cx='50' cy='65' r='14' fill='%234ecdc4'/%3E%3C/svg%3E">
+
         <link rel="stylesheet" href="index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1 class="title luckiest-guy-regular">Welcome</h1>
-        <p class="subTitle luckiest-guy-small">Lets pick the right color for your website</p>
-        <div class="spins">
-            <div class="element"> </div>
-            <div class="element"> </div>
-        </div>
+        <main>
+            <header class="page-header">
+                <h1 class="title">Color Family Generator</h1>
+                <p class="subTitle">Pick a color and a scheme, and get a ready-made palette</p>
+            </header>
 
-
-        <div class="container">
-            <form class="color-form">
-                <label for="colorInput" class="visually-hidden">Base color</label>
-                <input type="color" id="colorInput" value="#ff0000">
-                <label for="colorMode" class="visually-hidden">Color scheme mode</label>
-                <select id="colorMode" class="luckiest-guy-small">
-                    <option value="monochrome">Monochrome</option>
-                    <option value="analogic">Analogic</option>
-                    <option value="complement">Complement</option>
-                    <option value="triad">Triad</option>
-                    <option value="quad">Quad</option>
-                </select>
-                <button id="generateButton" class="luckiest-guy-small">Generate Color Scheme</button>
-            </form>
-            <div id="colorScheme" class="color-scheme">                                                                
+            <div class="container">
+                <form class="color-form">
+                    <div class="field">
+                        <label for="colorInput">Base color</label>
+                        <input type="color" id="colorInput" value="#ff0000">
+                    </div>
+                    <div class="field field-grow">
+                        <label for="colorMode">Scheme</label>
+                        <select id="colorMode">
+                            <option value="monochrome">Monochrome</option>
+                            <option value="analogic">Analogic</option>
+                            <option value="complement">Complement</option>
+                            <option value="triad">Triad</option>
+                            <option value="quad">Quad</option>
+                        </select>
+                    </div>
+                    <button id="generateButton">Generate</button>
+                </form>
+                <div id="colorScheme" class="color-scheme"></div>
             </div>
-        </div>
+
+            <footer class="page-footer">
+                <a href="https://github.com/Sadrahs/ColorFamilyGen" target="_blank" rel="noopener">View source on GitHub</a>
+                <span class="footer-divider">·</span>
+                <span>Powered by <a href="https://www.thecolorapi.com/" target="_blank" rel="noopener">TheColorAPI</a></span>
+            </footer>
+        </main>
+
         <script src="index.js"></script>
-
     </body>
-
-
-
 </html>
